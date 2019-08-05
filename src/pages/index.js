@@ -19,7 +19,12 @@ const IndexPage = () =>{
 return(
   <Layout>
     <SEO title="Home" />
-    
+    <Controller>
+    <Scene
+      classToggle="change"
+      
+      triggerElement=".triangle-4"
+    >
     <div className="section-container">
     <section className="landing">
     <div className={!uncover ? "triangle-1 uncover" : "triangle-1"}/>
@@ -35,12 +40,7 @@ return(
           
           
     </section>
-    <Controller>
-    <Scene
-      classToggle="change"
-      
-      triggerElement="#about"
-    >
+    
     <section className="about" id="about">
     <div className="triangle-5"/>
     <div className="about-left"></div>
@@ -50,9 +50,10 @@ return(
     </div>
 
     </section>
+  
+    </div>
     </Scene>
     </Controller>
-    </div>
     
   </Layout>
 )
